@@ -1,12 +1,12 @@
 const { MongoClient } = require("mongodb");
 
 async function connectDB() {
-    const url = "mongodb://127.0.0.1:27017"; // default MongoDB local server
+    const url = "mongodb://127.0.0.1:27017"; 
     const client = new MongoClient(url);
 
     try {
         await client.connect();
-        console.log("✅ MongoDB Connected Successfully!");
+        console.log(" MongoDB Connected Successfully!");
     const db=client.db('unversity');
     const students=db.collection('students');
     //insert one
